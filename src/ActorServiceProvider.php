@@ -2,9 +2,9 @@
 
 namespace Novarift\Actor;
 
+use Novarift\Actor\Commands\ActorCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Novarift\Actor\Commands\ActorCommand;
 
 class ActorServiceProvider extends PackageServiceProvider
 {
