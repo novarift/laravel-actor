@@ -49,13 +49,13 @@ class Actor extends Model
     public function scopeForResource(Builder $query, Model $resource): Builder
     {
         return $query->where('resource_type', $resource->getMorphClass())
-            ->where('resource_id', $resource->getForeignKey());
+            ->where('resource_id', $resource->getKey());
     }
 
     public function scopeOfActor(Builder $query, Model $actor): Builder
     {
         return $query->where('actor_type', $actor->getMorphClass())
-            ->where('actor_id', $actor->getForeignKey());
+            ->where('actor_id', $actor->getKey());
     }
 
     public function scopeOfAction(Builder $query, string $action): Builder

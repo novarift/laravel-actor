@@ -22,10 +22,10 @@ class Actor {
             ->updateOrCreate([
                 'action' => $action,
                 'resource_type' => $resource->getMorphClass(),
-                'resource_id' => $resource->getForeignKey(),
+                'resource_id' => $resource->getKey(),
             ], [
                 'actor_type' => $actor->getMorphClass(),
-                'actor_id' => $actor->getForeignKey(),
+                'actor_id' => $actor->getKey(),
                 'acted_at' => $at,
             ]);
     }
