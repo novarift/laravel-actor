@@ -5,7 +5,8 @@ namespace Novarift\Actor;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 
-class Actor {
+class Actor
+{
     public function act(Model $resource, string $action, ?Model $actor = null, ?Carbon $at = null): Models\Actor
     {
         $actor ??= auth()->user();
@@ -15,7 +16,6 @@ class Actor {
         }
 
         /** @var Model $actor */
-
         $at ??= now();
 
         return Models\Actor::query()
