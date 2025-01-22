@@ -33,7 +33,7 @@ class Actor extends Model
     {
         parent::__construct($attributes);
 
-        $this->table = config('actor.tables.actor', parent::getTable());
+        $this->table = config('actor.tables.actors', parent::getTable());
     }
 
     public function resource(): MorphTo

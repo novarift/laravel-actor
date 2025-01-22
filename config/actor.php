@@ -2,6 +2,6 @@
 
 return [
     'tables' => [
-        'actor' => 'actors',
+        'actors' => 'actors',
     ],
 ];

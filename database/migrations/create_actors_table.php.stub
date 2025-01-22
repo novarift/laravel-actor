@@ -12,7 +12,7 @@ return new class extends Migration
 
     public function __construct()
     {
-        $this->table = config('actor.tables.actor');
+        $this->table = config('actor.tables.actors');
     }
 
     public function up(): void
